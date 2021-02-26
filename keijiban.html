@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <font size="6" face="ＭＳ ゴシック">～掲示板～</font><br>
     <style>
         .flex-container {
-            background-color: rgb(115, 255, 178);  
+            background-color:#73D2DE;  
             display: flex;  
             flex-wrap: wrap;
             
@@ -14,11 +15,11 @@
         }
 
         .box {
-            
-            height: 75px;
-            margin: 25px;
-            padding: 25px;
-            border: 5px solid black;
+            width:200px;
+         
+            margin: 50px;
+            padding: 50px;
+            border: 3px solid rgb(0, 0, 0);
         }
     </style>
 </head>
@@ -26,40 +27,42 @@
 <body>
 <div class="flex-container">
 
-<div class="box" style= "background-color:rgb(235, 102, 13)">
+<div class="box" style= "background-color:#7776BC;width:200px;">
     <form method="POST" action="keijiban_select.php">
         <div>掲示板内のメッセージを表示します</div>
         <input type="submit" value="メッセージ表示">
         </form>
 </div>
 
-<div class="box" style= "background-color:rgb(240, 236, 6)">
+<div class="box" style= "background-color:#496F5D;width:600px;">
     <form method="POST" action="keijiban_insert.php">
         <div>
-        名前を入力してください<input type="text" name="namae">
+        名前<input type="text" name="namae">
         </div>
         <div>
-        メッセージを入力してください<input type="text" name="message" >
+        メッセージ<input type="text" name="message" >
         </div>
         <input type="submit" value="メッセージ投稿">
     </form>
 </div>
 
-<div class="box" style= "background-color:rgb(25, 28, 221)">
+<div class="box" style= "background-color:#E3D081;">
     <form method="POST" action="keijiban_delete.php">
         <div>
-        削除する番号を入力してください<input type="text" name="bangou">
+        削除(消したい行番号）<input type="text" name="bangou">
         </div>
         <input type="submit" value="削除">
     </form>
 </div>
 
-<div class="box" style= "background-color:rgb(221, 25, 25)">
+<div class="box" style= "background-color:#C46D5E;width:600px;">
     <form method="POST" action="keijiban_search.php">
         <div>
         検索のキーワードを入力してください<input type="text" name="search">
         </div>
         <input type="submit" value="検索">
+        <br>
+        <img src="https://2.bp.blogspot.com/-VuYOw4U5L2Q/V2ubWG5LP_I/AAAAAAAA7oA/Ymw2X9_yP6MYy_31sC9FFY9gAW5VUtv-wCLcB/s800/computer_search_kensaku.png" alt="画像の説明文" width="150" >
     </form>
 
 </div>
@@ -67,4 +70,6 @@
     <a href="keijiban.html">戻る</a>
 
 </body>
+
+
 </html>
