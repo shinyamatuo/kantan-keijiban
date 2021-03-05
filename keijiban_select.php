@@ -29,15 +29,16 @@
 header('Content-Type: text/html;charset=utf-8');  // 日本語が正しく表示されるようにいれる
 
 /* Connect to a MySQL database using driver invocation */
-$dsn = 'mysql:dbname=db1;host=localhost';
-$user = 'root';
-$password = 'password';
+require_once('db_info.php');
+
 
 try { 
-    $dbh = new PDO($dsn, $user, $password);
+    $dbh = new PDO($dsn);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     
     // この下にプログラムを書きましょう。
-    $re = $dbh->query("SELECT * FROM keijiban_tb");  // tb1のデータをSELECTします
+    $re = $dbh->query("SELECT * FROM keijibanM");  // tb1のデータをSELECTします
     print '<div class="flex-container">';
     while($kekka = $re->fetch()) {
         print"<div class='box'>";
